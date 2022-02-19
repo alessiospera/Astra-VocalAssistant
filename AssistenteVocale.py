@@ -5,7 +5,7 @@ import speech_recognition as sp #installato con !pip install speechrecognition e
 from src.chiacchere import *
 from src.dice import *
 from src.programs import *
-from random import randrange 
+from random import randrange, randint
 from gtts import gTTS #installato con !pip install gtts
 
 def speak(text):
@@ -46,11 +46,11 @@ def check_programs(text_in):
 	return 0,-1
 
 def dice(text_in):
-	lancio=["lancia un ","tira un ","fai rotolare un ","scaglia un "]
+	lancio=["lancia un ","tira un ","fai rotolare un ","scaglia un ", "lanciami un ", "tirami un ", "scagliami un "]
 	for d in dice_types.keys():
 		for l in lancio:
 			if l + d == text_in:
-				rand = randrange(1,dice_types[d])
+				rand = randint(1,dice_types[d])
 				return 1,rand,d
 	return 0,-1
 
@@ -58,7 +58,8 @@ def calcoli(text_in):
 	calcolo=["quanto fa ", "che risultato viene se faccio ", "calcolami "]
 	return 0
 
-
+#Refactoring già pianificato
+#main da rifare che è una bruttura, lo so
 def main():		#volendo si può evitare ma è norma farlo
 	while True:
 		text_in = get_audio()
@@ -135,8 +136,11 @@ def main():		#volendo si può evitare ma è norma farlo
 			else:
 				text_out="Non conosco il dado che mi hai chiesto di lanciare "
 				print("Sperollo: " + text_out)
-
-
+			
+			#funzionalità future
+				#1 - musica su spotify (avvia spotify, )
+				#2 - meteo 
+				#3 - ricerche internet
 
 		try:
 			#print("*SPEAKING:*")
