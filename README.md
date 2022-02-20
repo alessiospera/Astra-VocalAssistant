@@ -7,16 +7,16 @@
  Il codice iniziale ha bisogno di un buon refactoring, in quanto era un codice che doveva solo funzionare in locale con poche righe di codice e che non avrebbe visto nessuno. Ora ne ha bisogno, in quanto pubblico e con future funzioni in arrivo.
 
  **Migliorie da fare**:
-    - [ ] refactoring
-    - [ ] meno spaghetti code
-    - [ ] rendere i commenti internazionali
-    - [x] creazione file audio.py per separare il riconoscimento vocale dal resto del programma (src) 
-    - [x] includere tutti i file audio in una cartella "audio" 
-    - [x] aggiungere suoni all'avvio, al tiro dadi e ai calcoli 
-    - [ ] sostituire i file chiacchere.py e dice.py con dei file json da inserire in una cartella apposita "json"
-    - [ ] ragionare su un possibile machine learning per rendere l'assistente più socievole
-    - [ ] rendere automatico o più intuitivo per gli altri impostare il percorso dei programmi da far avviare dall'assistente
-    ...
+   - [ ] refactoring
+   - [ ] meno spaghetti code
+   - [ ] rendere i commenti internazionali
+   - [x] creazione file audio.py per separare il riconoscimento vocale dal resto del programma (src) 
+   - [x] includere tutti i file audio in una cartella "audio" 
+   - [x] aggiungere suoni all'avvio, al tiro dadi e ai calcoli 
+   - [ ] sostituire i file chiacchere.py e dice.py con dei file json da inserire in una cartella apposita "json"
+   - [ ] ragionare su un possibile machine learning per rendere l'assistente più socievole
+   - [ ] rendere automatico o più intuitivo per gli altri impostare il percorso dei programmi da far avviare dall'assistente
+   - ...
 
 
  **Funzionalità da aggiungere**:
@@ -30,11 +30,11 @@
    - [ ] timer
     ...
 
-> **Serve installare**:
->   - playsound                
->   - speechrecognition
->   - pyaudio 
->   - gtts
+ **Serve installare**:
+   - playsound                
+   - speechrecognition
+   - pyaudio 
+   - gtts
 
 (--English--)
 MY FIRST PERSONALIZED VOICE ASSISTANT
@@ -65,8 +65,8 @@ MY FIRST PERSONALIZED VOICE ASSISTANT
    - [ ] timer
    - ...
 
-> **You need to install**:
->   - playsound
->   - speechrecognition
->   - pyaudio
->   - gtts
+ **You need to install**:
+   - playsound
+   - speechrecognition
+   - pyaudio
+   - gtts
