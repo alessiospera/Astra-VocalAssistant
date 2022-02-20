@@ -11,7 +11,7 @@ def check_programs(text_in):
 	chiusura=["chiudi ","termina ","killa "]
 	for p in programs.keys(): #cicla su un array di chiavi(nomi dei programmi)
 		for a in avvio:
-			if a + p == text_in: #uniamo la parola di avvio al nome dek programma
+			if a + p == text_in: #uniamo la parola di avvio al nome del programma
 				return 1,p #si possono tornare due variabili
 		for c in chiusura:
 			if c + p == text_in:
@@ -29,11 +29,13 @@ def dice(text_in):
 
 def calcoli(text_in):
 	calcolo=["quanto fa ", "che risultato viene se faccio ", "calcolami "]
+	playsound.playsound('audio/bitUP.wav') #ancora da definire la funzione
 	return 0
 
 #Refactoring già pianificato
 #main da rifare che è una bruttura, lo so
 def main():		#volendo si può evitare ma è norma farlo
+	playsound.playsound('audio/avvio.wav') #suono d'avvio provvisorio
 	while True:
 		text_in = get_audio()
 		text_in = text_in.lower()
@@ -42,6 +44,7 @@ def main():		#volendo si può evitare ma è norma farlo
 			if "spegni" == text_in or "arresta" == text_in: #qua c'è una cit
 				print("Sperollo: mi sto spegnendo. Ora non potrò più sentirti. A presto caro.")
 				speak("Mi sto spegnendo. Ora non potrò più sentirti. A presto caro.")
+				playsound.playsound('audio/Spegnimento.wav')
 				break
 			if text_in in greetings_in:
 				ran = randrange(len(greetings_out))
@@ -102,6 +105,7 @@ def main():		#volendo si può evitare ma è norma farlo
 			comand,rand,type = dice(text_in) #comand con una m per differenziare
 			if comand == 1:
 				text_out="Sto tirando un " + type
+				playsound.playsound('audio/Dice.mp3')
 				print("Sperollo: " + text_out)
 				text_out= "Il risultato del lancio è " + str(rand)
 				print("Sperollo: " + text_out)
