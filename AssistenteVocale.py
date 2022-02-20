@@ -30,6 +30,9 @@ def calcoli(text_in):
 	playsound.playsound('audio/bitUP.mp3') #ancora da definire la funzione
 	return 0
 
+def timer():
+	return 0
+
 #Refactoring già pianificato
 #main da rifare che è una bruttura, lo so
 def main():		#volendo si può evitare ma è norma farlo
