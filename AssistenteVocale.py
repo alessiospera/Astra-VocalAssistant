@@ -1,37 +1,11 @@
 from logging import exception
 import os
-import playsound  #possibile grazie al fatto che l'ho installato con !pip install playsound
-import speech_recognition as sp #installato con !pip install speechrecognition e anche per pyaudio
+from src.audio import *
 from src.chiacchere import *
-from src.dice import *
 from src.programs import *
+from src.dice import *
 from random import randrange, randint
-from gtts import gTTS #installato con !pip install gtts
 
-def speak(text):
-	tts = gTTS(text=text,lang='it') #traduce la lingua in italiano
-	filename = "voce.mp3"
-	if os.path.exists(filename):
-		os.remove(filename)
-	if filename != None:
-		tts.save(filename)
-		playsound.playsound(filename)
-
-def get_audio():
-	print("LISTENING...")
-	r = sp.Recognizer()
-	with sp.Microphone() as source:
-		r.adjust_for_ambient_noise(source,duration=0.5)
-		audio = r.listen(source, phrase_time_limit=5)
-		result = ""
-		try:
-			result = r.recognize_google(audio, language="it")
-			print(result)
-			print("PROCESSING...")
-		except Exception as e:
-			print("Errore di riconoscimento vocale")
-			get_audio()
-	return result
 
 def check_programs(text_in):
 	avvio=["apri ","avvia ","lancia "]
