@@ -1,5 +1,4 @@
 from logging import exception
-import os
 from src.audio import *
 from src.chiacchere import *
 from src.programs import *

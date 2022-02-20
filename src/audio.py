@@ -1,3 +1,4 @@
+import os
 import playsound  #possibile grazie al fatto che l'ho installato con !pip install playsound
 import speech_recognition as sp #installato con !pip install speechrecognition e anche per pyaudio
 from gtts import gTTS #installato con !pip install gtts
