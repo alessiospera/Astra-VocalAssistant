@@ -15,6 +15,7 @@
     - aggiungere suoni all'avvio, al tiro dadi e ai calcoli
     - sostituire i file chiacchere.py e dice.py con dei file json da inserire in una cartella apposita "json"
     - ragionare su un possibile machine learning per rendere l'assistente più socievole
+    - rendere automatico o più intuitivo per gli altri impostare il percorso dei programmi da far avviare dall'assistente
 
 
  Funzionalità da aggiungere:
@@ -23,6 +24,7 @@
     - meteo
     - ricerche su internet
     - battute e freddure
+    - timer
     ...
 
  Info utili
@@ -47,6 +49,7 @@ MY FIRST PERSONALIZED VOICE ASSISTANT
     - add sounds to startup, dice roll and calculations
     - replace the chiacchere.py and dice.py files with json files to be placed in a special "json" folder
     - think about possible machine learning to make the assistant more sociable
+    - make automatic or more intuitive for others to set the path of the programs to be started by the assistant
 
 
  Features to add:
@@ -55,6 +58,7 @@ MY FIRST PERSONALIZED VOICE ASSISTANT
     - weather forecast
     - internet searches
     - jokes and puns
+    - timer
     ...
 
  Useful info

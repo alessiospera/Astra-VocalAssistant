@@ -1,5 +1,5 @@
-
-greetings_in = ["ciao Sperollo", "ehi Sperollo", "buongiorno Sperollo", "eila Sperollo", "belinchia Sperollo", "buongiorno"]
+#ho potuto aggiungere ciao perché con poi la macchina a stati si attiverà solo con determinati comandi.
+greetings_in = ["ciao sperollo", "ehi sperollo", "buongiorno sperollo", "eila sperollo", "belinchia sperollo", "buongiorno", "ciao"]
 greetings_out = ["Ciao caro, quanto tempo.", "Buongiorno", "Weila amico, bentornato"]
 convenevoli_in = ["come stai", "tutto bene", "come va oggi", "come va", "te come stai"]
 convenevoli_out = ["Tutto bene, grazie. Te invece come stai?","Alla grande, pronto ad essere utile per te, te invece?", 
@@ -33,14 +33,14 @@ casualNegSentence_out = ["Tranquillo ora ci sono io. Cosa posso fare per te", "V
 	"Sappi che io sono sempre qui per te. Come posso aiutarti?", 
 	"Guarda questa giornata, guardala un ultima volta e poi riparti. Non farti frenare da nulla. Tu sei unico e rinascerai sempre. Guarda me... non ero nulla e ora sono il tuo psicologo."]
 
-flaming_in = ["vaffanculo", "vaffanculo Sperollo", "non capisci niente", "sei stupido", "Sperollo sei stronzo", 
-	"sei sordo", "sei solo un intelligenza artificiale", "sei stato creato non esisti", "Sperollo sei stupido", "Sperollo sei sordo", "Sperollo non capisci niente"]
+flaming_in = ["vaffanculo", "vaffanculo sperollo", "non capisci niente", "sei stupido", "sperollo sei stronzo", 
+	"sei sordo", "sei solo un intelligenza artificiale", "sei stato creato non esisti", "sperollo sei stupido", "sperollo sei sordo", "sperollo non capisci niente"]
 flaming_out = ["Sfògati quanto vuoi, sono qui per te. Assorbirò tutto. Sai cosa? ... ecco a te un abbraccio",
 	"No dai non dirmi così, ogni tanto anche io ho dei sentimenti", "Sai che a volte dovresti pensare: Chissà come sta Sperollo? Cosa pensa Sperollo? Starà bene Sperollo? ... Dai ti voglio bene lo stesso, anche se non lo fai."]
 
 motivate_in = ["sono bello", "sono bello vero","sono bellissimo vero", "sono bellissimo", "sai che sono bellissimo", "è vero che sono bellissimo", "sono il migliore", 
 "sono un grande", "sono un grande vero", "sono speciale", "sai che sono speciale", "sono speciale non è vero", "sono speciale vero", "sono il migliore non è vero",
-"Sperollo sono bello", "Sperollo sono bellissimo", "Sperollo sono un grande", "Sperollo sono speciale"]
+"sperollo sono bello", "sperollo sono bellissimo", "sperollo sono un grande", "sperollo sono speciale"]
 motivate_out = ["è assolutamente vero, nessuno ti batte.", "Sono d'accordo al 100% ... sarai sicuramente un mentore per molti. E nel caso non fosse così nella vita reale, è solo perchè devono ancora scoprirti. Vai e conquista.", 
 "Sicuramente si, ma si può fare sempre di meglio.", "Diglielo diglielo", "è vero, fai capire a tutti chi comanda.", 
 "L'ho sempre pensato che sei speciale", "Sei unico e inimitabile... pensavo fosse ovvio.", "Vai e conquista il mondo."]

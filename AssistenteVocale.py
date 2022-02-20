@@ -7,8 +7,6 @@ from random import randrange, randint
 
 
 def check_programs(text_in):
-	avvio=["apri ","avvia ","lancia "]
-	chiusura=["chiudi ","termina ","killa "]
 	for p in programs.keys(): #cicla su un array di chiavi(nomi dei programmi)
 		for a in avvio:
 			if a + p == text_in: #uniamo la parola di avvio al nome del programma
@@ -19,23 +17,23 @@ def check_programs(text_in):
 	return 0,-1
 
 def dice(text_in):
-	lancio=["lancia un ","tira un ","fai rotolare un ","scaglia un ", "lanciami un ", "tirami un ", "scagliami un "]
 	for d in dice_types.keys():
 		for l in lancio:
 			if l + d == text_in:
 				rand = randint(1,dice_types[d])
 				return 1,rand,d
-	return 0,-1
+	return 0,0,-1
+	
 
 def calcoli(text_in):
 	calcolo=["quanto fa ", "che risultato viene se faccio ", "calcolami "]
-	playsound.playsound('audio/bitUP.wav') #ancora da definire la funzione
+	playsound.playsound('audio/bitUP.mp3') #ancora da definire la funzione
 	return 0
 
 #Refactoring già pianificato
 #main da rifare che è una bruttura, lo so
 def main():		#volendo si può evitare ma è norma farlo
-	playsound.playsound('audio/avvio.wav') #suono d'avvio provvisorio
+	playsound.playsound('audio/avvio.mp3') #suono d'avvio provvisorio
 	while True:
 		text_in = get_audio()
 		text_in = text_in.lower()
@@ -44,7 +42,7 @@ def main():		#volendo si può evitare ma è norma farlo
 			if "spegni" == text_in or "arresta" == text_in: #qua c'è una cit
 				print("Sperollo: mi sto spegnendo. Ora non potrò più sentirti. A presto caro.")
 				speak("Mi sto spegnendo. Ora non potrò più sentirti. A presto caro.")
-				playsound.playsound('audio/Spegnimento.wav')
+				playsound.playsound('audio/spegnimento.mp3')
 				break
 			if text_in in greetings_in:
 				ran = randrange(len(greetings_out))
@@ -91,28 +89,31 @@ def main():		#volendo si può evitare ma è norma farlo
 			#FUNZIONALITA'
 
 			#lancio e chiusura programmi
-			command,name = check_programs(text_in) #il primo valore di return va in command e il secondo in name
-			if  command == 1:
-				text_out="Sto aprendo " + name
-				print("Sperollo: " + text_out)
-				os.startfile(programs[name]) #programs[name]: path programma
-			elif command == 2:
-				text_out="Sto chiudendo " + name
-				print("Sperollo: " + text_out)
-				os.system("TASKKILL /F /IM " + os.path.basename(programs[name]))
+			if any([x in text_in for x in avvio]) or any([x in text_in for x in chiusura]):
+				command,name = check_programs(text_in) #il primo valore di return va in command e il secondo in name
+				if  command == 1:
+					text_out="Sto aprendo " + name
+					print("Sperollo: " + text_out)
+					os.startfile(programs[name]) #programs[name]: path programma
+				elif command == 2:
+					text_out="Sto chiudendo " + name
+					print("Sperollo: " + text_out)
+					os.system("TASKKILL /F /IM " + os.path.basename(programs[name]))
 
 			#lancio dadi
-			comand,rand,type = dice(text_in) #comand con una m per differenziare
-			if comand == 1:
-				text_out="Sto tirando un " + type
-				playsound.playsound('audio/Dice.mp3')
-				print("Sperollo: " + text_out)
-				text_out= "Il risultato del lancio è " + str(rand)
-				print("Sperollo: " + text_out)
+			if any([x in text_in for x in lancio]):
+				comand,rand,type = dice(text_in) #comand con una m per differenziare
+				if comand == 1:
+					text_out="Sto tirando un " + type
+					playsound.playsound('audio/dice.mp3')
+					print("Sperollo: " + text_out)
+					text_out= "Il risultato del lancio è " + str(rand)
+					print("Sperollo: " + text_out)
 
-			else:
-				text_out="Non conosco il dado che mi hai chiesto di lanciare "
-				print("Sperollo: " + text_out)
+				else:
+					text_out="Non conosco il dado che mi hai chiesto di lanciare "
+					print("Sperollo: " + text_out)
+			
 			
 			#funzionalità future
 				#1 - musica su spotify (avvia spotify, )
@@ -129,5 +130,7 @@ def main():		#volendo si può evitare ma è norma farlo
 if __name__ =='__main__': #questo comando richiama il main solo se il programma viene lanciato tramite cmd con python nomeprogramma.py
 	try:
 		main()
-	except:
-		print("Errore generale")
+	except Exception as e:
+		print(e)
+		#print("Errore generale")
+		

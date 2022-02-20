@@ -5,7 +5,7 @@ from gtts import gTTS #installato con !pip install gtts
 
 def speak(text):
 	tts = gTTS(text=text,lang='it') #traduce la lingua in italiano
-	filename = "voce.mp3"
+	filename = "audio/voce.mp3"
 	if os.path.exists(filename):
 		os.remove(filename)
 	if filename != None:

@@ -1,3 +1,4 @@
+lancio=["lancia un ","tira un ","fai rotolare un ","scaglia un ", "lanciami un ", "tirami un ", "scagliami un "]
 dice_types = { 
 	"percentuale": 100,
 	"d20": 20,
