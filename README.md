@@ -2,9 +2,9 @@
 (--Italian--)
  IL MIO ASSISTENTE VOCALE PERSONALIZZATO
 
- Progetto nato con l'idea di realizzare il mio primo assistente vocale. Evolutosi, in seguito, in un progetto che, dalle basi di un assistente creato per me, punta a creare un assistente unico, irriverente, saggio e più simpatico rispetto agli altri assistenti già presenti sul mercato, con funzionalità uniche e particolari.
+ Progetto nato con l'idea di realizzare il mio primo assistente vocale. Evolutosi, in seguito, in un progetto che, dalle basi di un assistente creato per me, punta a creare un assistente unico, irriverente, saggio e più simpatico rispetto agli altri, con funzionalità uniche e particolari.
 
- Il codice iniziale ha bisogno di un buon refactoring, in quanto era un codice che doveva solo funzionare in locale con poche righe di codice e che non avrebbe visto nessuno. Ora ne ha bisogno, in quanto pubblico e con future funzioni in arrivo.
+ Il codice iniziale ha bisogno di un buon refactoring, in quanto era un codice che doveva solo funzionare in locale con poche righe di codice e che non avrebbe visto nessuno. Ora, in quanto pubblico e con future funzioni in arrivo, ne ha bisogno.
 
  **Migliorie da fare**:
    - [ ] refactoring
@@ -39,9 +39,9 @@
 (--English--)
 MY PERSONALIZED VOICE ASSISTANT
 
- Project born with the idea of making my first voice assistant. Later evolved into a project that, from the basics of an assistant created for me, aims to create a unique, irreverent, wise and more sympathetic assistant than the other assistants already on the market, with unique and particular features.
+ Project born with the idea of making my first voice assistant. Later evolved into a project that, from the foundations of an assistant created for me, aims to create a unique, irreverent, wise and more funny assistant than the others, with unique and particular features.
 
- The initial code needs some good refactoring, as it was code that only had to work locally with a few lines of code and that nobody would see. Now he needs it, as a public and with future features on the way.
+ The initial code needs some good refactoring, as it was code that only had to work locally with a few lines of code and that nobody would see. Now, as a public and with future features on the way, it needs it.
 
  **Improvements to be made**:
    - [ ] refactoring
