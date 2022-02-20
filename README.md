@@ -2,8 +2,7 @@
 (--Italian--)
  IL MIO PRIMO ASSISTENTE VOCALE PERSONALIZZATO
 
- Progetto nato con l'idea di realizzare il mio primo assistente vocale
- Evolutosi, in seguito, in un progetto che dalle basi di un assistente creato per me punti a creare un assistente unico, irriverente, saggio e più simpatico rispetto agli altri assistenti già presenti sul mercato, con funzionalità uniche e anche le classiche che dovrebbe avere un assistente.
+ Progetto nato con l'idea di realizzare il mio primo assistente vocale. Evolutosi, in seguito, in un progetto che, dalle basi di un assistente creato per me, punta a creare un assistente unico, irriverente, saggio e più simpatico rispetto agli altri assistenti già presenti sul mercato, con funzionalità uniche e particolari.
 
  Il codice iniziale ha bisogno di un buon refactoring, in quanto era un codice che doveva solo funzionare in locale con poche righe di codice e che non avrebbe visto nessuno. Ora ne ha bisogno, in quanto pubblico e con future funzioni in arrivo.
 
@@ -40,7 +39,7 @@
 (--English--)
 MY FIRST PERSONALIZED VOICE ASSISTANT
 
- Project born with the idea of ​​creating my first voice assistant and evolved into a project that from the basics of an assistant useful to me can become a unique, irreverent, wise and more sympathetic assistant than the other assistants already on the market.
+ Project born with the idea of making my first voice assistant. Later evolved into a project that, from the basics of an assistant created for me, aims to create a unique, irreverent, wise and more sympathetic assistant than the other assistants already on the market, with unique and particular features.
 
  The initial code needs some good refactoring, as it was code that only had to work locally with a few lines of code and that nobody would see. Now he needs it, as a public and with future features on the way.
 
