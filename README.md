@@ -7,26 +7,27 @@
  Il codice iniziale ha bisogno di un buon refactoring, in quanto era un codice che doveva solo funzionare in locale con poche righe di codice e che non avrebbe visto nessuno. Ora ne ha bisogno, in quanto pubblico e con future funzioni in arrivo.
 
  Migliorie da fare:
-    - [ ] refactoring
-    - [ ] meno spaghetti code
-    - [ ] rendere i commenti internazionali
+    - [] refactoring
+    - [] meno spaghetti code
+    - [] rendere i commenti internazionali
     - [x] creazione file audio.py per separare il riconoscimento vocale dal resto del programma (src) 
     - [x] includere tutti i file audio in una cartella "audio" 
     - [x] aggiungere suoni all'avvio, al tiro dadi e ai calcoli 
-    - [ ] sostituire i file chiacchere.py e dice.py con dei file json da inserire in una cartella apposita "json"
-    - [ ] ragionare su un possibile machine learning per rendere l'assistente più socievole
-    - [ ] rendere automatico o più intuitivo per gli altri impostare il percorso dei programmi da far avviare dall'assistente
+    - [] sostituire i file chiacchere.py e dice.py con dei file json da inserire in una cartella apposita "json"
+    - [] ragionare su un possibile machine learning per rendere l'assistente più socievole
+    - [] rendere automatico o più intuitivo per gli altri impostare il percorso dei programmi da far avviare dall'assistente
+    ...
 
 
  Funzionalità da aggiungere:
     - [x] avvio e chiusura programmi
     - [x] tiro dadi
-    - [ ] attivazione con comando vocale
-    - [ ] spotify (musica)
-    - [ ] meteo
-    - [ ] ricerche su internet
-    - [ ] battute e freddure
-    - [ ] timer
+    - [] attivazione con comando vocale
+    - [] spotify (musica)
+    - [] meteo
+    - [] ricerche su internet
+    - [] battute e freddure
+    - [] timer
     ...
 
  Info utili
@@ -44,25 +45,25 @@ MY FIRST PERSONALIZED VOICE ASSISTANT
  The initial code needs some good refactoring, as it was code that only had to work locally with a few lines of code and that nobody would see. Now he needs it, as a public and with future features on the way.
 
  Improvements to be made:
-    - [ ] refactoring
-    - [ ] less spaghetti code
+    - [] refactoring
+    - [] less spaghetti code
     - [x] creation of audio.py file to separate speech recognition from the rest of the program (src)
     - [x] include all audio files in an "audio" folder
     - [x] add sounds to startup, dice roll and calculations
-    - [ ] replace the chiacchere.py and dice.py files with json files to be placed in a special "json" folder
-    - [ ] think about possible machine learning to make the assistant more sociable
-    - [ ] make automatic or more intuitive for others to set the path of the programs to be started by the assistant
-
+    - [] replace the chiacchere.py and dice.py files with json files to be placed in a special "json" folder
+    - [] think about possible machine learning to make the assistant more sociable
+    - [] make automatic or more intuitive for others to set the path of the programs to be started by the assistant
+    ...
 
  Features to add:
     - [x] start and stop programs
     - [x] throw dice
-    - [ ] activation with voice command
-    - [ ] spotify (music)
-    - [ ] weather forecast
-    - [ ] internet searches
-    - [ ] jokes and puns
-    - [ ] timer
+    - [] activation with voice command
+    - [] spotify (music)
+    - [] weather forecast
+    - [] internet searches
+    - [] jokes and puns
+    - [] timer
     ...
 
  Useful info
