@@ -30,9 +30,8 @@
    - [ ] timer
     ...
 
-> [!TIP]
 > **Info utili**
-> Serve installare:
+> #Serve installare:
 >   - playsound                
 >   - speechrecognition
 >   - pyaudio 
@@ -67,9 +66,8 @@ MY FIRST PERSONALIZED VOICE ASSISTANT
    - [ ] timer
    - ...
 
-> [!TIP]
 > **Useful info**
-> You need to install:
+> #You need to install:
 >   - playsound
 >   - speechrecognition
 >   - pyaudio
