@@ -31,7 +31,7 @@
     ...
 
 > **Info utili**
-> #Serve installare:
+> #Serve installare#:
 >   - playsound                
 >   - speechrecognition
 >   - pyaudio 
