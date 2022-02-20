@@ -28,7 +28,7 @@
    - [ ] ricerche su internet
    - [ ] battute e freddure
    - [ ] timer
-    ...
+   - ...
 
  **Serve installare**:
    - playsound                
