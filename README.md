@@ -1,6 +1,6 @@
 # AssistenteVocale
 (--Italian--)
- IL MIO PRIMO ASSISTENTE VOCALE PERSONALIZZATO
+ IL MIO ASSISTENTE VOCALE PERSONALIZZATO
 
  Progetto nato con l'idea di realizzare il mio primo assistente vocale. Evolutosi, in seguito, in un progetto che, dalle basi di un assistente creato per me, punta a creare un assistente unico, irriverente, saggio e più simpatico rispetto agli altri assistenti già presenti sul mercato, con funzionalità uniche e particolari.
 
@@ -37,7 +37,7 @@
    - gtts
 
 (--English--)
-MY FIRST PERSONALIZED VOICE ASSISTANT
+MY PERSONALIZED VOICE ASSISTANT
 
  Project born with the idea of making my first voice assistant. Later evolved into a project that, from the basics of an assistant created for me, aims to create a unique, irreverent, wise and more sympathetic assistant than the other assistants already on the market, with unique and particular features.
 
