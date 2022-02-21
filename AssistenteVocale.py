@@ -3,7 +3,7 @@ from src.audio import *
 from src.chatting import *
 from src.programs import *
 from src.dice import *
-from src.wether import *
+from src.weather import *
 from src.search_on_wikipedia import *
 from src.time import *
 from src.calculator import *

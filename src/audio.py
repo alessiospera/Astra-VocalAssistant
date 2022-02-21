@@ -25,5 +25,5 @@ def get_audio():
 			print("PROCESSING...")
 		except Exception as e:
 			print("Errore di riconoscimento vocale")
-			get_audio()
+			return get_audio()
 	return result

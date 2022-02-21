@@ -20,18 +20,18 @@ def dice(text_in):
 			if s + t == text_in:
 				rand = randint(1,dice_types[t])
 				answer="Sto tirando un " + t
-				playsound.playsound('audio/dice.mp3')
 				print("Astra: " + answer)
 				speak(answer)
+				playsound.playsound('audio/dice.mp3')
 				answer= "Il risultato del lancio è " + str(rand)
 				print("Astra: " + answer)
 				speak(answer)
 				return 0
-			else:
-				answer="Non conosco il dado che mi hai chiesto di lanciare."
-				print("Astra: " + answer)
-				speak(answer)
-				return 0
+	answer="Non conosco il dado che mi hai chiesto di lanciare."
+	print("Astra: " + answer)
+	speak(answer)
+				
+			
 
 
 
