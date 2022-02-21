@@ -5,7 +5,7 @@ import datetime
 import requests
 from src.audio import *
 wether_sentence = ["che tempo fa", "fuori come è il tempo", "come è il meteo", "piove", "c'è il sole"]
-def wether():
+def wether(text_in):
     api_key="Apply your unique IDS"
     base_url="https://api.openweathermap.org/data/2.5/weather?"
     speak("di quale città vuoi sapere il meteo?")
@@ -32,3 +32,4 @@ def wether():
                 str(current_humidiy) +
                 "\n nello specifico = " +
                 str(weather_description))
+    return 0

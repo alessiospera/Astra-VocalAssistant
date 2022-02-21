@@ -7,3 +7,4 @@ def search_on_wikipedia(text_in):
     speak("In accordo con Wikipedia:")
     print(results)
     speak(results)
+    return 0

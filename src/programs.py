@@ -1,26 +1,8 @@
 import os
-
-avvio=["apri ","avvia ","lancia "]
-chiusura=["chiudi ","termina ","killa "]
-
-def check_programs(text_in):
-	for p in programs.keys(): #cicla su un array di chiavi(nomi dei programmi)
-		for a in avvio:
-			if a + p == text_in: #uniamo la parola di avvio al nome del programma
-				command,name = 1,p #si possono tornare due variabili
-		for c in chiusura:
-			if c + p == text_in:
-				command,name = 2,p
-	if  command == 1:
-		text_out="Sto aprendo " + name
-		print("Astra: " + text_out)
-		os.startfile(programs[name]) #programs[name]: path programma
-	elif command == 2:
-		text_out="Sto chiudendo " + name
-		print("Astra: " + text_out)
-		os.system("TASKKILL /F /IM " + os.path.basename(programs[name]))
-	return 0,-1
-
+from src.audio import *
+#anche questi
+open_sentence=["apri ","avvia "] #ho dovuto togliere lancia come comando perché con il nuovo refactoring con il termine lancia, andava ad avviare qualche programma e a lanciare i dadi
+close_sentence=["chiudi ","termina ","killa "]
 #questo andrà in un file json	
 programs = {
 	"twitch": r"D:/Programmi/Twitch/Bin/Twitch.exe",
@@ -34,3 +16,22 @@ programs = {
 	"rocket league": r"D:/Programmi/Steam/steamapps/common/rocketleague/Binaries"
 } #\\ per windows per evitare che nei path i \n o altro confondano il sistema
   #lo ho cambiato da array di tuple in dizionario per poter selezionare il programma tramite il suo nome come chiave
+
+#ho usato answer perchè text_out creava problemi
+def check_programs(text_in):
+	for p in programs.keys(): #cicla su un array di chiavi(nomi dei programmi)
+		for a in open_sentence:
+			if a + p == text_in: #uniamo la parola di avvio al nome del programma
+				answer="Sto aprendo " + p
+				print("Astra: " + answer)
+				speak(answer)
+				os.startfile(programs[p]) #programs[name]: path programma
+				return 0
+		for c in close_sentence:
+			if c + p == text_in:
+				answer="Sto chiudendo " + p
+				print("Astra: " + answer)
+				speak(answer)
+				os.system("TASKKILL /F /IM " + os.path.basename(programs[p]))
+				return 0
+	
