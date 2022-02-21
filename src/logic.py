@@ -3,6 +3,7 @@ from AssistenteVocale import get_audio, speak
 from src.command import Command
 from enum import Enum
 from typing import Dict, List, Union
+from src.chatting import *
 
 class AssistantState(Enum):
     """Defines constants for handling the Assistant states
@@ -77,6 +78,8 @@ class AssistantLogic:
         """
 
         # Say "Hi"
+        playsound.playsound('audio/avvio.mp3') #suono d'avvio provvisorio
+        hello() #qua sarà da inserire user_name dell'utilizzatore così potrà salutarlo per nome
         speak(self.__welcome_msg)
         self.__state = AssistantState.SLEEP
 
