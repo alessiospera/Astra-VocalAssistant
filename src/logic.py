@@ -46,7 +46,7 @@ class AssistantLogic:
         self.__state: AssistantState = AssistantState.INIT
         self.__wakeup_command: str = None
         self.__commands_map: Dict[str, Command] = {}
-        self.__welcome_msg = welcome_msg
+        #self.__welcome_msg = welcome_msg
 
     def set_wakeup_command(self, wakeup_command: str) -> None:
         """Sets the vocal command to wake up the Assistant
@@ -93,7 +93,7 @@ class AssistantLogic:
             return
         # If the input text is the wakeup command, play a sound and go to the LISTEN state
         if text_in == self.__wakeup_command:
-            # playsound.playsound("audio/bip.mp3")
+            playsound.playsound("audio/bitUP.mp3")
             self.__state = AssistantState.LISTEN
 
     def __listen_state(self) -> None:

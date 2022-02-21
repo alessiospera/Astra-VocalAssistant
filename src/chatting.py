@@ -14,17 +14,17 @@ def hello():
 		
 
 #tutto questo andrà in un file json apposito
-who_what_iam = ["chi sei tu?", "chi sei?", "cosa sei tu?", "cosa sei?", "cosa puoi fare?", "come puoi essere utile?", "come ti chiami?", "",]
-who_what_iam_answer = ["Mi chiamo astra versione 0.0.1, sono il tuo assistente vocale personalizzato. Sono stato programmato inizialmente per risolvere problemi minori, ma sono continuamente in aggiornamento. Ora posso per te: fare ricerche su internet e su wikipedia, tirare dadi per te, fare calcoli al posto tuo, avviarti programmi, spegnerti il computer forse e altro.  Nel caso volessi una feature aggiuntiva contatta il mio creatore."]
+who_what_iam_in = ["chi sei tu?", "chi sei?", "cosa sei tu?", "cosa sei?", "cosa puoi fare?", "come puoi essere utile?", "come ti chiami?", "",]
+who_what_iam_out = ["Mi chiamo astra versione 0.0.1, sono il tuo assistente vocale personalizzato. Sono stato programmato inizialmente per risolvere problemi minori, ma sono continuamente in aggiornamento. Ora posso per te: fare ricerche su internet e su wikipedia, tirare dadi per te, fare calcoli al posto tuo, avviarti programmi, spegnerti il computer forse e altro.  Nel caso volessi una feature aggiuntiva contatta il mio creatore."]
 
-who_your_creator = ["chi è il tuoi creatore?", "chi ti ha creato?", "chi ti ha inventato?", "parlami del tuo creatore", "chi è il tuo inventore?", "chi è il tuo programmatore?" ]
-who_your_creator_answer = ["Il mio creatore è Alessio Speranza, sono fiero di essere una sua creazione"]
+who_your_creator_in = ["chi è il tuoi creatore?", "chi ti ha creato?", "chi ti ha inventato?", "parlami del tuo creatore", "chi è il tuo inventore?", "chi è il tuo programmatore?" ]
+who_your_creator_out = ["Il mio creatore è Alessio Speranza, sono fiero di essere una sua creazione"]
 
-new_features = ["ci sono nuove feature?", "ci sono nuovi comandi?", "quali sono i nuovi aggiornenti?", "hai nuovi aggiornamenti?", "hai nuove feature?", "hai nuovi comandi?"]
-new_features_answer = ["Le ultime feature implementate sono: avvio programmi, lancio dadi e saluto che varia con l'ora del giorno. Sono in costante aggiornamento perciò presto potrai provare nuove funzionalità"]
+new_features_in = ["ci sono nuove feature?", "ci sono nuovi comandi?", "quali sono i nuovi aggiornenti?", "hai nuovi aggiornamenti?", "hai nuove feature?", "hai nuovi comandi?"]
+new_features_out = ["Le ultime feature implementate sono: avvio programmi, lancio dadi e saluto che varia con l'ora del giorno. Sono in costante aggiornamento perciò presto potrai provare nuove funzionalità"]
 
-future_features = ["ci sono nuove feature in arrivo?", "ci sono nuovi comandi all'orizzonte?", "ci sono nuovi comandi in arrivo?" "ci saranno nuove feature?", "ci saranno nuovi comandi?"]
-future_features_answer = ["Le funzionalità in arrivo sono:  attivazione con comando vocale, personalizzazione dell'assistente, ricerca su wikipedia e su internet, informazioni meteo, ricompense crypto, inserimento metaverso. Nel caso volessi avere più informazioni sul progetto e le prossime funzionalità ti consiglio di visitare la pagina github del progetto o il sito"]
+future_features_in = ["ci sono nuove feature in arrivo?", "ci sono nuovi comandi all'orizzonte?", "ci sono nuovi comandi in arrivo?" "ci saranno nuove feature?", "ci saranno nuovi comandi?"]
+future_features_out = ["Le funzionalità in arrivo sono:  attivazione con comando vocale, personalizzazione dell'assistente, ricerca su wikipedia e su internet, informazioni meteo, ricompense crypto, inserimento metaverso. Nel caso volessi avere più informazioni sul progetto e le prossime funzionalità ti consiglio di visitare la pagina github del progetto o il sito"]
 
 #ho potuto aggiungere ciao perché con poi la macchina a stati si attiverà solo con determinati comandi.
 greetings_in = ["ciao astra", "ehi astra", "buongiorno astra", "eila astra", "belinchia astra", "buongiorno", "ciao"]

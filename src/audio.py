@@ -15,15 +15,14 @@ def speak(text):
 def get_audio():
 	print("LISTENING...")
 	r = sp.Recognizer()
+	result = ""
 	with sp.Microphone() as source:
 		r.adjust_for_ambient_noise(source,duration=0.5)
 		audio = r.listen(source, phrase_time_limit=5)
-		result = ""
 		try:
 			result = r.recognize_google(audio, language="it")
 			print(result)
 			print("PROCESSING...")
 		except Exception as e:
 			print("Errore di riconoscimento vocale")
-			return get_audio()
 	return result.lower()
