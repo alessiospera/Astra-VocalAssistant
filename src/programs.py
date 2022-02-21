@@ -1,6 +1,27 @@
+import os
 
 avvio=["apri ","avvia ","lancia "]
 chiusura=["chiudi ","termina ","killa "]
+
+def check_programs(text_in):
+	for p in programs.keys(): #cicla su un array di chiavi(nomi dei programmi)
+		for a in avvio:
+			if a + p == text_in: #uniamo la parola di avvio al nome del programma
+				command,name = 1,p #si possono tornare due variabili
+		for c in chiusura:
+			if c + p == text_in:
+				command,name = 2,p
+	if  command == 1:
+		text_out="Sto aprendo " + name
+		print("Astra: " + text_out)
+		os.startfile(programs[name]) #programs[name]: path programma
+	elif command == 2:
+		text_out="Sto chiudendo " + name
+		print("Astra: " + text_out)
+		os.system("TASKKILL /F /IM " + os.path.basename(programs[name]))
+	return 0,-1
+
+#questo andrà in un file json	
 programs = {
 	"twitch": r"D:/Programmi/Twitch/Bin/Twitch.exe",
 	"spotify": r"C:/Users/Spera/AppData/Roaming/Spotify/Spotify.exe",

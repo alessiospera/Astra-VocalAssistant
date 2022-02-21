@@ -1,61 +1,18 @@
-import datetime  
-import time
-import wikipedia
-import webbrowser
 from logging import exception
 from src.audio import *
-from src.chiacchere import *
+from src.chatting import *
 from src.programs import *
 from src.dice import *
-from random import randrange, randint
-
-#idea: potrei implementare che saluti dando anche un'opinione sul meteo
-def saluto():
-	hour = datetime.datetime.now().hour
-	if hour >= 0 and hour < 12:
-		speak("Ciao. Buongiorno, spero sia un ottimo inizio di giornata per te")
-		print("Ciao. Buongiorno, spero sia un ottimo inizio di giornata per te")
-	if hour >= 12 and hour < 18:
-		speak("Ciao, buon pomeriggio")
-		print("Ciao, buon pomeriggio")
-	else:
-		speak("Ciao, Buonasera")
-		print("Ciao, Buonasera")
-
-def search_on_Wikipedia():
-	return 0
+from src.wether import *
+from src.search_on_wikipedia import *
+from src.time import *
+from src.calculator import *
+from random import randrange
 	
-
-def check_programs(text_in):
-	for p in programs.keys(): #cicla su un array di chiavi(nomi dei programmi)
-		for a in avvio:
-			if a + p == text_in: #uniamo la parola di avvio al nome del programma
-				return 1,p #si possono tornare due variabili
-		for c in chiusura:
-			if c + p == text_in:
-				return 2,p
-	return 0,-1
-
-def dice(text_in):
-	for d in dice_types.keys():
-		for l in lancio:
-			if l + d == text_in:
-				rand = randint(1,dice_types[d])
-				return 1,rand,d
-	return 0,0,-1
-	
-
-def calcoli(text_in):
-	playsound.playsound('audio/bitUP.mp3') #ancora da definire la funzione
-	return 0
-
-def timer():
-	return 0
 
 #Refactoring già pianificato
 #main da rifare che è una bruttura, lo so
 def main():		#volendo si può evitare ma è norma farlo
-	calcolo=["quanto fa ", "che risultato viene se faccio ", "calcolami ", "fai ", "calcola "] #forse da spostare
 	playsound.playsound('audio/avvio.mp3') #suono d'avvio provvisorio
 	saluto()
 	while True:
@@ -121,45 +78,34 @@ def main():		#volendo si può evitare ma è norma farlo
 			if text_in in futurefeatures:
 				speak(futurefeatures_answer)
 				print("Astra: " + futurefeatures_answer)
-			
+
+			#RICERCHE
+
+			#wikipedia
+			#internet
+
 			#FUNZIONALITA'
+
+			#che ore sono
+			if text_in in timeSentence:
+				what_time_is_it()
 
 			#lancio e chiusura programmi
 			if any([x in text_in for x in avvio]) or any([x in text_in for x in chiusura]):
-				command,name = check_programs(text_in) #il primo valore di return va in command e il secondo in name
-				if  command == 1:
-					text_out="Sto aprendo " + name
-					print("Astra: " + text_out)
-					os.startfile(programs[name]) #programs[name]: path programma
-				elif command == 2:
-					text_out="Sto chiudendo " + name
-					print("Astra: " + text_out)
-					os.system("TASKKILL /F /IM " + os.path.basename(programs[name]))
-
+				check_programs(text_in) #il primo valore di return va in command e il secondo in name
+				
 			#lancio dadi
-			if any([x in text_in for x in lancio]):
-				comand,rand,type = dice(text_in) #comand con una m per differenziare
-				if comand == 1:
-					text_out="Sto tirando un " + type
-					playsound.playsound('audio/dice.mp3')
-					print("Astra: " + text_out)
-					text_out= "Il risultato del lancio è " + str(rand)
-					print("Astra: " + text_out)
+			if any([x in text_in for x in throw]):
+				dice(text_in)
 
-				else:
-					text_out="Non conosco il dado che mi hai chiesto di lanciare "
-					print("Astra: " + text_out)
+			#calcolatrice
+			if any([x in text_in for x in calculation]):
+				calcoli(text_in)
 
-			if any([x in text_in for x in calcolo]):
-				return 0
+			#meteo
+			if any([x in text_in for x in wether_sentence]):
+				wether()
 			
-			
-			
-			#funzionalità future
-				#1 - musica su spotify (avvia spotify, )
-				#2 - meteo 
-				#3 - ricerche internet
-
 		try:
 			#print("*SPEAKING:*")
 			speak(text_out)
@@ -172,5 +118,5 @@ if __name__ =='__main__': #questo comando richiama il main solo se il programma 
 		main()
 	except Exception as e:
 		print(e)
-		#print("Errore generale")
+		#print("Errore generale") da riattivare solo quando verrà rilasciato agli utenti
 		

@@ -1,3 +1,18 @@
+from src.time import *
+#idea: potrei implementare che saluti dando anche un'opinione sul meteo
+def saluto():
+	hour = datetime.datetime.now().hour
+	if hour >= 0 and hour < 12:
+		speak("Ciao. Buongiorno, spero sia un ottimo inizio di giornata per te")
+		print("Astra: Ciao. Buongiorno, spero sia un ottimo inizio di giornata per te")
+	if hour >= 12 and hour < 18:
+		speak("Ciao, buon pomeriggio")
+		print("Astra: Ciao, buon pomeriggio")
+	else:
+		speak("Ciao, Buonasera")
+		print("Astra: Ciao, Buonasera")
+
+#tutto questo andrà in un file json apposito
 whoandwhatiam = ["chi sei tu?", "chi sei?", "cosa sei tu?", "cosa sei?", "cosa puoi fare?", "come puoi essere utile?", "come ti chiami?", "",]
 whoandwhatiam_answer = ["Mi chiamo astra versione 0.0.1, sono il tuo assistente vocale personalizzato. Sono stato programmato inizialmente per risolvere problemi minori, ma sono continuamente in aggiornamento. Ora posso per te: fare ricerche su internet e su wikipedia, tirare dadi per te, fare calcoli al posto tuo, avviarti programmi, spegnerti il computer forse e altro.  Nel caso volessi una feature aggiuntiva contatta il mio creatore."]
 
