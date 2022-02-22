@@ -19,7 +19,7 @@ class diceCommand(Command):
         return dice(match.group(1), match.group(2), match.group(3))
 
 class timeCommand(Command):
-    def __init__(self, pattern: list[str]) -> None:
+    def __init__(self, pattern: str) -> None:
         super().__init__(pattern)
 
     def action(self, match: re.Match) -> str:

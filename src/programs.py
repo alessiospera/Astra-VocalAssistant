@@ -1,7 +1,7 @@
 import os
 from src.audio import *
 #anche questi
-open_sentence=["apri","avvia"] #ho dovuto togliere lancia come comando perché con il nuovo refactoring con il termine lancia, andava ad avviare qualche programma e a lanciare i dadi
+open_sentence=["apri","avvia","lancia"] #ho dovuto togliere lancia come comando perché con il nuovo refactoring con il termine lancia, andava ad avviare qualche programma e a lanciare i dadi
 close_sentence=["chiudi","termina","killa"]
 #questo andrà in un file json	
 programs = {
