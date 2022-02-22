@@ -36,7 +36,7 @@ class AssistantLogic:
         commands_map (dict of (str, Command)): Data structure that maps keywords to commands (for optimization)
     """
 
-    def __init__(self, welcome_msg: str) -> None:
+    def __init__(self) -> None:
         """Creates an instance of AssistantLogic
 
         Args:
@@ -80,7 +80,7 @@ class AssistantLogic:
         # Say "Hi"
         playsound.playsound('audio/avvio.mp3') #suono d'avvio provvisorio
         hello() #qua sarà da inserire user_name dell'utilizzatore così potrà salutarlo per nome
-        speak(self.__welcome_msg)
+        #speak(self.__welcome_msg)
         self.__state = AssistantState.SLEEP
 
     def __sleep_state(self) -> None:

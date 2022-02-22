@@ -1,8 +1,8 @@
 import os
 from src.audio import *
 #anche questi
-open_sentence=["apri ","avvia "] #ho dovuto togliere lancia come comando perché con il nuovo refactoring con il termine lancia, andava ad avviare qualche programma e a lanciare i dadi
-close_sentence=["chiudi ","termina ","killa "]
+open_sentence=["apri","avvia"] #ho dovuto togliere lancia come comando perché con il nuovo refactoring con il termine lancia, andava ad avviare qualche programma e a lanciare i dadi
+close_sentence=["chiudi","termina","killa"]
 #questo andrà in un file json	
 programs = {
 	"twitch": r"D:/Programmi/Twitch/Bin/Twitch.exe",
@@ -18,20 +18,18 @@ programs = {
   #lo ho cambiato da array di tuple in dizionario per poter selezionare il programma tramite il suo nome come chiave
 
 #ho usato answer perchè text_out creava problemi
-def check_programs(text_in):
-	for p in programs.keys(): #cicla su un array di chiavi(nomi dei programmi)
-		for a in open_sentence:
-			if a + p == text_in: #uniamo la parola di avvio al nome del programma
-				answer="Sto aprendo " + p
-				print("Astra: " + answer)
-				speak(answer)
-				os.startfile(programs[p]) #programs[name]: path programma
-				return 0
-		for c in close_sentence:
-			if c + p == text_in:
-				answer="Sto chiudendo " + p
-				print("Astra: " + answer)
-				speak(answer)
-				os.system("TASKKILL /F /IM " + os.path.basename(programs[p]))
-				return 0
+def check_programs(command,program):
+	answer = " "
+	if command in open_sentence: #uniamo la parola di avvio al nome del programma
+		answer="Sto aprendo " + program
+		print("Astra: " + answer)
+		os.startfile(programs[program]) #programs[name]: path programma
+		
+	elif command in close_sentence:
+		answer="Sto chiudendo " + program
+		print("Astra: " + answer)
+		os.system("TASKKILL /F /IM " + os.path.basename(programs[program]))
+
+	return answer # la funzione deve tornare la stringa da dire, se no può crashere(se nessuna stringa in ritorno)
+		
 	

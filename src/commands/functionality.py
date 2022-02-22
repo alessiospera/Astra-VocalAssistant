@@ -5,18 +5,18 @@ from src.programs import *
 from src.dice import *
 
 class programsCommand(Command):
-    def __init__(self, pattern: str, responces:str) -> None:
+    def __init__(self, pattern: str) -> None:
         super().__init__(pattern)
 
-    def action(self, match: re.Match) -> str:
-        return check_programs()
+    def action(self, match: re.Match) -> str: #match.group(2) nome programma che viene detto (1) sarebbe la prima parola tipo avvia e lo (0) tutto insieme
+        return check_programs(match.group(1), match.group(2))
 
 class diceCommand(Command):
-    def __init__(self, pattern: list[str], responces:str) -> None:
+    def __init__(self, pattern: str) -> None:
         super().__init__(pattern)
 
     def action(self, match: re.Match) -> str:
-        return dice()
+        return dice(match.group(1), match.group(2), match.group(3))
 
 class timeCommand(Command):
     def __init__(self, pattern: list[str]) -> None:

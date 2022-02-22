@@ -3,18 +3,18 @@ from src.time import *
 def hello():
 	hour = datetime.datetime.now().hour
 	if hour >= 0 and hour < 12:
-		print("Astra: Ciao. Buongiorno, spero sia un ottimo inizio di giornata per te")
-		speak("Ciao. Buongiorno, spero sia un ottimo inizio di giornata per te")
+		print("Astra: Ciao. Buongiorno, spero sia un ottimo inizio di giornata per te.")
+		speak("Ciao. Buongiorno, spero sia un ottimo inizio di giornata per te.")
 	if hour >= 12 and hour < 18:
-		print("Astra: Ciao, buon pomeriggio")
-		speak("Ciao, buon pomeriggio")
+		print("Astra: Ciao, buon pomeriggio.")
+		speak("Ciao, buon pomeriggio.")
 	else:
-		print("Astra: Ciao, Buonasera")
-		speak("Ciao, Buonasera")
+		print("Astra: Ciao, Buonasera.")
+		speak("Ciao, Buonasera.")
 		
 
 #tutto questo andrà in un file json apposito
-who_what_iam_in = ["chi sei tu?", "chi sei?", "cosa sei tu?", "cosa sei?", "cosa puoi fare?", "come puoi essere utile?", "come ti chiami?", "",]
+who_what_iam_in = ["chi sei tu?", "chi sei?", "cosa sei tu?", "cosa sei?", "cosa puoi fare?", "come puoi essere utile?", "come ti chiami?"]
 who_what_iam_out = ["Mi chiamo astra versione 0.0.1, sono il tuo assistente vocale personalizzato. Sono stato programmato inizialmente per risolvere problemi minori, ma sono continuamente in aggiornamento. Ora posso per te: fare ricerche su internet e su wikipedia, tirare dadi per te, fare calcoli al posto tuo, avviarti programmi, spegnerti il computer forse e altro.  Nel caso volessi una feature aggiuntiva contatta il mio creatore."]
 
 who_your_creator_in = ["chi è il tuoi creatore?", "chi ti ha creato?", "chi ti ha inventato?", "parlami del tuo creatore", "chi è il tuo inventore?", "chi è il tuo programmatore?" ]

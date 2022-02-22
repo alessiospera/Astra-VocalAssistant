@@ -131,44 +131,45 @@ from src.commands.functionality import *
 from src.logic import *
 def main():
 	#settaggio assistente
-	assistant = AssistantLogic("Weila")
+	assistant = AssistantLogic()
 	assistant.set_wakeup_command("astra")
 
 	#settaggio chatting
 	greetings = salutationsCommand("^(ciao|buongiorno)( astra)?",greetings_out)
 	assistant.register_command(["ciao","buongiorno"],greetings)
-	convenevoli = chattingCommand(convenevoli_in,convenevoli_out)
-	assistant.register_command(convenevoli_in,convenevoli)
-	answerPosConve = chattingCommand(answerPosConve_in,answerPosConve_out)
-	assistant.register_command(answerPosConve_in,answerPosConve)
-	answerNegConve = chattingCommand(answerNegConve_in,answerNegConve_out)
-	assistant.register_command(answerNegConve_in,answerNegConve)
-	casualPosSentence = chattingCommand(casualPosSentence_in,casualPosSentence_out)
-	assistant.register_command(casualPosSentence_in,casualPosSentence)
-	casualNegSentence = chattingCommand(casualNegSentence_in,casualNegSentence_out)
-	assistant.register_command(casualNegSentence_in,casualNegSentence)
-	flaming = chattingCommand(flaming_in,flaming_out)
-	assistant.register_command(flaming_in,flaming)
-	motivate = chattingCommand(motivate_in,motivate_out)
-	assistant.register_command(motivate_in,motivate)
-	demotivate = chattingCommand(demotivate_in,demotivate_out)
-	assistant.register_command(demotivate_in,demotivate)
-	who_what_iam = chattingCommand(who_what_iam_in,who_what_iam_out)
-	assistant.register_command(who_what_iam_in,who_what_iam)
-	who_your_creator = chattingCommand(who_your_creator_in,who_your_creator_out)
-	assistant.register_command(who_your_creator_in,who_your_creator)
-	new_features = chattingCommand(new_features_in,new_features_out)
-	assistant.register_command(new_features_in,new_features)
-	future_features = chattingCommand(future_features_in,future_features_out)
-	assistant.register_command(future_features_in,future_features)
+	# convenevoli = chattingCommand(convenevoli_in,convenevoli_out)
+	# assistant.register_command(convenevoli_in,convenevoli)
+	# answerPosConve = chattingCommand(answerPosConve_in,answerPosConve_out)
+	# assistant.register_command(answerPosConve_in,answerPosConve)
+	# answerNegConve = chattingCommand(answerNegConve_in,answerNegConve_out)
+	# assistant.register_command(answerNegConve_in,answerNegConve)
+	# casualPosSentence = chattingCommand(casualPosSentence_in,casualPosSentence_out)
+	# assistant.register_command(casualPosSentence_in,casualPosSentence)
+	# casualNegSentence = chattingCommand(casualNegSentence_in,casualNegSentence_out)
+	# assistant.register_command(casualNegSentence_in,casualNegSentence)
+	# flaming = chattingCommand(flaming_in,flaming_out)
+	# assistant.register_command(flaming_in,flaming)
+	# motivate = chattingCommand(motivate_in,motivate_out)
+	# assistant.register_command(motivate_in,motivate)
+	# demotivate = chattingCommand(demotivate_in,demotivate_out)
+	# assistant.register_command(demotivate_in,demotivate)
+	# who_what_iam = chattingCommand(who_what_iam_in,who_what_iam_out)
+	# assistant.register_command(who_what_iam_in,who_what_iam)
+	# who_your_creator = chattingCommand(who_your_creator_in,who_your_creator_out)
+	# assistant.register_command(who_your_creator_in,who_your_creator)
+	# new_features = chattingCommand(new_features_in,new_features_out)
+	# assistant.register_command(new_features_in,new_features)
+	# future_features = chattingCommand(future_features_in,future_features_out)
+	# assistant.register_command(future_features_in,future_features)
 
 	#settaggio funzionalità
-	programs_command = programsCommand("^(avvia|apri|chiudi|termina|chilla)",text_in) #per programs e dice servirà text_in trovare il modo
-	assistant.register_command(["avvia","apri","chiudi","termina","chilla"],programs_command)
-	dice_command = diceCommand(dice_sentence,text_in) #per programs e dice servirà text_in trovare il modo
-	assistant.register_command(dice_sentence,dice_command)
-	time_command = timeCommand(time_sentence)
-	assistant.register_command(time_sentence,time_command)
+	dice_command = diceCommand("^(lancia|tira|fai rotolare|scaglia|lanciami|tirami|scagliami) (un|\d+) (di \d{1,3}|d\d{1,3}|percentuale)") #per programs e dice servirà text_in trovare il modo
+	assistant.register_command(["lancia","tira","rotola","scaglia","lanciami","tirami","scagliami"],dice_command)
+	programs_command = programsCommand("^(avvia|apri|lancia|chiudi|termina|chilla) (.*)") #per programs e dice servirà text_in trovare il modo
+	assistant.register_command(["avvia","apri","lancia","chiudi","termina","chilla"],programs_command)
+	
+	#time_command = timeCommand(time_sentence)
+	#assistant.register_command(time_sentence,time_command)
 	
 	#avvio ASTRA
 	assistant.run()
