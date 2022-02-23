@@ -15,8 +15,9 @@ from src.logic import *
 def main():
 	#settaggio assistente
 	assistant = AssistantLogic()
-	assistant.set_wakeup_command("astra")
-
+	assistant.set_wakeup_command(["astra","asta","atra","stra","atta"])
+	closeAstra = closeCommand("^(spegni|arresta|staccastacca)")
+	assistant.register_command(["spegni","arresta","staccastacca"],closeAstra)
 	#settaggio chatting
 	greetings = salutationsCommand("^(ciao|buongiorno)( astra)?",greetings_out)
 	assistant.register_command(["ciao","buongiorno"],greetings)

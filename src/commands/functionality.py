@@ -23,7 +23,7 @@ class timeCommand(Command):
         super().__init__(pattern)
 
     def action(self, match: re.Match) -> str:
-        return what_time_is_it(match.group(2))
+        return what_time_is_it(match.group(1))
 
 # class dayCommand(Command):
 #     def __init__(self, pattern: str) -> None:
