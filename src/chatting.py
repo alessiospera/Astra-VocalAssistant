@@ -5,7 +5,7 @@ def hello():
 	if hour >= 0 and hour < 12:
 		print("Astra: Ciao. Buongiorno, spero sia un ottimo inizio di giornata per te.")
 		speak("Ciao. Buongiorno, spero sia un ottimo inizio di giornata per te.")
-	if hour >= 12 and hour < 18:
+	elif hour >= 12 and hour < 18:
 		print("Astra: Ciao, buon pomeriggio.")
 		speak("Ciao, buon pomeriggio.")
 	else:

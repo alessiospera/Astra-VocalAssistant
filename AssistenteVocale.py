@@ -11,6 +11,7 @@ from random import randrange
 from src.commands.salutations import *
 from src.commands.functionality import *
 from src.logic import *
+
 def main():
 	#settaggio assistente
 	assistant = AssistantLogic()
@@ -50,10 +51,10 @@ def main():
 	programs_command = programsCommand("^(avvia|apri|lancia|chiudi|termina|chilla) (.*)") #per programs e dice servirà text_in trovare il modo
 	assistant.register_command(["avvia","apri","lancia","chiudi","termina","chilla"],programs_command)
 	
-	time_command = timeCommand("^(che ore sono|what time is it|che ore sono ora|quale era l'ora di ieri a quest'ora|a che ora della giornata siamo)")
-	assistant.register_command(["ore","ora","time"],time_command)
+	time_command = timeCommand("^che or[ae] (è|sono|era(no)? ieri a quest'ora)")
+	assistant.register_command(["che"],time_command)
 	
-	#avvio ASTRA
+	#avvio aSpera ad ASTRA
 	assistant.run()
 
 			
