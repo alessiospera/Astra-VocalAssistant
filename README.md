@@ -8,7 +8,7 @@
 
  **Migliorie da fare**:
    - [x] trovare un nome adeguato per l'assistente
-   - [ ] refactoring
+   - [x] refactoring
    - [ ] meno spaghetti code
    - [ ] rendere i commenti internazionali
    - [x] creazione file audio.py per separare il riconoscimento vocale dal resto del programma (src) 
@@ -24,8 +24,8 @@
 
  **Funzionalità da aggiungere**:
    - [ ] personalizzazione assistente
-   - [ ] attivazione con comando vocale
-   - [ ] saluto all'avvio differente a seconda dell'orario
+   - [x] attivazione con comando vocale
+   - [x] saluto all'avvio differente a seconda dell'orario
    - [x] avvio e chiusura programmi
    - [x] tiro dadi
    - [ ] spotify (musica)
@@ -51,7 +51,7 @@ MY PERSONALIZED VOICE ASSISTANT
 
  **Improvements to be made**:
    - [x] find a cool name for the assistant
-   - [ ] refactoring
+   - [x] refactoring
    - [ ] less spaghetti code
    - [x] creation of audio.py file to separate speech recognition from the rest of the program (src)
    - [x] include all audio files in an "audio" folder
@@ -65,9 +65,10 @@ MY PERSONALIZED VOICE ASSISTANT
 
  **Features to add**:
    - [ ] personalization
+   - [x] activation with voice command
+   - [x] different start greetings depending on the time
    - [x] start and stop programs
    - [x] throw dice
-   - [ ] activation with voice command
    - [ ] spotify (music)
    - [ ] weather forecast
    - [ ] internet searches
